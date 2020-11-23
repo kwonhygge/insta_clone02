@@ -14,7 +14,7 @@ def user_path(instance, filename):
     pid = ''.join(arr)
     #파일 확장자명
     extension = filename.split('.')[-1]
-    return 'accounts/{}/{}/{}'.format(instance.user.username, pid, extension)
+    return 'accounts/{}/{}.{}'.format(instance.user.username, pid, extension)
 
 # Create your models here.
 class Profile(models.Model):
